@@ -1,0 +1,6 @@
+category: Utils
+requires: jpilot libgcc1 libgdbm4 libglib2.0_0 libgtk2.0_0 libpisock9
+sdesc: "Backup plugin for J-Pilot PalmOS desktop organizer"
+ldesc: "J-Pilot is a desktop organizer application for PalmOS devices.
+It is meant to be an alternative to the Palm Desktop for those who run
+*NIX systems."

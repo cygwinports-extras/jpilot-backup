@@ -1,0 +1,24 @@
+Respect LIBS so we can pass the jpilot.exe implib.
+
+--- origsrc/jpilot-backup-0.60/configure.in	2009-02-07 13:47:10.000000000 -0600
++++ src/jpilot-backup-0.60/configure.in	2010-06-13 19:06:18.905569400 -0500
+@@ -174,7 +174,7 @@ if test "x$have_gtk2" = "xno"; then
+ fi
+ 
+ dnl Check for gdbm libs
+-AC_CHECK_LIB(gdbm, main, LIBS="$libs -lgdbm",
++AC_CHECK_LIB(gdbm, main, LIBS="$LIBS -lgdbm",
+  AC_MSG_ERROR([*** GDBM not installed - please install first ***]))
+ 
+ dnl Check for GDBM_NOLOCK
+--- origsrc/jpilot-backup-0.60/src/Makefile.am	2007-06-11 21:19:24.000000000 -0500
++++ src/jpilot-backup-0.60/src/Makefile.am	2010-06-13 18:52:56.173655700 -0500
+@@ -10,7 +10,7 @@ libbackup_la_SOURCES = \
+ 	bprefs.h \
+ 	libplugin.h
+ 
+-libbackup_la_LDFLAGS = -avoid-version
++libbackup_la_LDFLAGS = -module -avoid-version -no-undefined
+ libbackup_la_LIBADD = @LIBS@ @PILOT_LIBS@ @GTK_LIBS@
+ libdir = $(prefix)/lib/jpilot/plugins
+ 
