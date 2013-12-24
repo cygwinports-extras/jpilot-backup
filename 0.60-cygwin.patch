@@ -1,0 +1,14 @@
+--- origsrc/jpilot-backup-0.60/configure.in	2013-12-23 23:07:51.690837400 -0600
++++ src/jpilot-backup-0.60/configure.in	2013-12-23 23:09:52.157727700 -0600
+@@ -81,6 +81,11 @@ for pilot_libs in $pilot_prefix/lib /usr
+       PILOT_LIBS="-L$pilot_libs $PILOT_LIBS"
+       break
+    fi
++   if test -r "$pilot_libs/libpisock.dll.a" ; then
++      pilotlibs=yes
++      PILOT_LIBS="-L$pilot_libs $PILOT_LIBS"
++      break
++   fi
+ done
+ fi
+ 
