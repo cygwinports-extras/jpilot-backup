@@ -1,6 +1,6 @@
 NAME="jpilot-backup"
 VERSION=0.60
-RELEASE=2
+RELEASE=3
 CATEGORY="Utils"
 SUMMARY="Backup plugin for J-Pilot PalmOS desktop organizer"
 DESCRIPTION="J-Pilot is a desktop organizer application for PalmOS devices.
